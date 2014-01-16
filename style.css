@@ -1,0 +1,15 @@
+
+body {
+    margin: 0;
+    background: hsl(269, 37%, 12%);
+}
+
+#text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#paper {
+}

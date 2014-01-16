@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vertical Coding</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src='bower_components/requirejs/require.js'></script>
+  <script type="text/javascript">
+    require.config({
+      baseUrl: './',
+      paths: {
+        color: 'bower_components/cirru-color/src/parser'
+      }
+    })
+    require(['src/main'])
+  </script>
+</head>
+<body>
+<canvas id="paper" width="1200" height="600"></canvas>
+<textarea id="text">
+-- https://github.com/Cirru/cirru-gopher/blob/master/code/scope.cr
+
+set a (int 2)
+
+print (self)
+
+set c (child)
+
+under c
+  under parent
+    print a
+
+print $ get c a
+
+set c x (int 3)
+print $ get c x
+
+set just-print $ code
+  print a
+
+print just-print
+
+eval (self) just-print
+eval just-print
+
+print (string "string with space")
+print (string "escapes \n \"\\")
+
+brackets ((((()))))
+
+"eval" $ string "eval"
+
+print (add $ (int 1) (int 2))
+
+print $ unwrap $
+  map (a $ int 1) (b $ int 2)</textarea>
+</body>
+</html>
