@@ -4,7 +4,7 @@ Vertical Coding
 
 Stupid prototyping for coding vertically
 
-Live http://repo.jiyinyiyong.me/vertical-coding/
+Demo: http://repo.cirru.org/vertical-coding/
 
 Screenshot:
 
